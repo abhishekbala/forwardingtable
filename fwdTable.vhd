@@ -110,10 +110,10 @@ BEGIN
     IF (wr_b = '1' and rd_b = '0') THEN
 		hit <= '0';
       IF ( count = 31 ) THEN
-		  count <= 0;
+		  --count <= 0;
 		  tag (conv_integer (count))<= tagin;
         data(conv_integer (count))<= datain;
-        count <= count +1;  
+        count <= 0;  
       ELSE
         tag (conv_integer (count))<= tagin;
         data(conv_integer (count))<= datain;
