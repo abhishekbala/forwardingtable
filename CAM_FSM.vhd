@@ -9,9 +9,9 @@ end CAM_FSM;
 
 architecture mult_seg_arch of CAM_FSM is
 	type state_type is
-	(s0, s1, s2, s3);
+	(s0, s1, s2, s3, s4);
 	signal state_reg, state_next: state_type;
-	
+
 begin                                     -- begin the architecture definition
 	
 	process (clk, reset) -- state register definition
@@ -31,12 +31,14 @@ begin                                     -- begin the architecture definition
 			when s1 =>
 				state_next <= s2;
 			when s2 =>
+				state_next <= s3;
+			when s3 =>
 				if (port_comparator = '1') then
 					state_next <= s0;
 				else
-					state_next <= s3;
+					state_next <= s4;
 				end if;
-			when s3 =>
+			when s4 =>
 				state_next <= s0;
 		end case;
 	 end process;
@@ -45,18 +47,22 @@ begin                                     -- begin the architecture definition
 	begin
 		case state_reg is
 			when s0 =>
-				read_DA <= '1';
+				read_DA <= '0';
 				read_SA <= '0';
 				write_SP <= '0';
 			when s1 =>
-				read_DA <= '0';
-				read_SA <= '1';
+				read_DA <= '1';
+				read_SA <= '0';
 				write_SP <= '0';
 			when s2 =>
 				read_DA <= '0';
-				read_SA <= '0';
+				read_SA <= '1';
 				write_SP <= '0';
 			when s3 =>
+				read_DA <= '0';
+				read_SA <= '0';
+				write_SP <= '0';
+			when s4 =>
 				read_DA <= '0';
 				read_SA <= '1';
 				write_SP <= '1';
