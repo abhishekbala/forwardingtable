@@ -1,0 +1,8 @@
+
+State Machine - |camTestBench|y_current
+Name y_current.doneState y_current.checkState y_current.readState y_current.writeState y_current.resetState 
+y_current.resetState 0 0 0 0 0 
+y_current.writeState 0 0 0 1 1 
+y_current.readState 0 0 1 0 1 
+y_current.checkState 0 1 0 0 1 
+y_current.doneState 1 0 0 0 1 

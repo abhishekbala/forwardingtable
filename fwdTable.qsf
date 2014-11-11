@@ -36,18 +36,43 @@
 # -------------------------------------------------------------------------- #
 
 
-set_global_assignment -name FAMILY "Cyclone IV GX"
-set_global_assignment -name DEVICE auto
-set_global_assignment -name TOP_LEVEL_ENTITY fwdTable
+set_global_assignment -name FAMILY "Cyclone II"
+set_global_assignment -name DEVICE EP2C35F672C6
+set_global_assignment -name TOP_LEVEL_ENTITY camTestBench
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "23:36:27  OCTOBER 19, 2014"
-set_global_assignment -name LAST_QUARTUS_VERSION 9.1
+set_global_assignment -name LAST_QUARTUS_VERSION 13.0
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
-set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
-set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
-set_global_assignment -name VHDL_FILE fwdTable.vhd
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
 set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name SIMULATION_MODE TIMING
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name VHDL_FILE CAM_FSM.vhd
+set_global_assignment -name VHDL_FILE fwdTable.vhd
+set_global_assignment -name VHDL_FILE camTestBench.vhd
+set_global_assignment -name VHDL_FILE counter12.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE TestBenchVWF.vwf
+set_global_assignment -name MIF_FILE tbrom48.mif
+set_global_assignment -name VHDL_FILE tbrom48.vhd
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_simulation
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name TIMEQUEST_DO_CCPP_REMOVAL OFF
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_location_assignment PIN_N2 -to Clock
+set_location_assignment PIN_U6 -to Reset
+set_location_assignment PIN_AE15 -to data_out[2]
+set_location_assignment PIN_AD15 -to data_out[1]
+set_location_assignment PIN_AC15 -to data_out[0]
+set_location_assignment PIN_AD12 -to read_state
+set_location_assignment PIN_AF23 -to start_out
+set_location_assignment PIN_AB21 -to test_good
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Duke/Duke/Senior/ECE 559/FinalProject/forwardingtable-master/TestBenchVWF.vwf"

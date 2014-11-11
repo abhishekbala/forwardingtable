@@ -13,10 +13,10 @@ ENTITY fwdTable IS
             rst              : IN   STD_LOGIC;                   --   Reset
             rd_b             : in   STD_LOGIC;                   --   Read
             wr_b             : in   STD_LOGIC;                   --   Write
-            datain           : in   STD_LOGIC_VECTOR(1 downto 0);-- data in
+            datain           : in   STD_LOGIC_VECTOR(2 downto 0);-- data in
                                                                  -- during write.
             tagin            : in   STD_LOGIC_VECTOR(47 downto 0);-- Tag Data
-            data_out         : out  STD_LOGIC_VECTOR(1 downto 0);-- Data out
+            data_out         : out  STD_LOGIC_VECTOR(2 downto 0);-- Data out
             --full             : out  STD_LOGIC;                   -- Stack Full  
             hit              : out  STD_LOGIC                    -- Found Match  
            );
@@ -25,7 +25,7 @@ END fwdTable;
  
 ARCHITECTURE cam256_A OF fwdTable IS
 TYPE tag_array IS ARRAY (0 to 31) of STD_LOGIC_VECTOR(47 downto 0);
-TYPE data_array IS ARRAY (0 to 31) of STD_LOGIC_VECTOR(1 downto 0);
+TYPE data_array IS ARRAY (0 to 31) of STD_LOGIC_VECTOR(2 downto 0);
 SIGNAL tag              : tag_array;
 SIGNAL data             : data_array;
 SIGNAL count            : INTEGER RANGE 0 TO 31;
@@ -68,38 +68,38 @@ BEGIN
 		tag(30)	<= ("000000000000000000000000000000000000000000000000");
 		tag(31)	<= ("000000000000000000000000000000000000000000000000");
     --data<=(OTHERS=>"0");
-		data(0)	<= ("00");
-		data(1)	<= ("00");
-		data(2)	<= ("00");
-		data(3)	<= ("00");
-		data(4)	<= ("00");
-		data(5)	<= ("00");
-		data(6)	<= ("00");
-		data(7)	<= ("00");
-		data(8)	<= ("00");
-		data(9)	<= ("00");
-		data(10)	<= ("00");
-		data(11)	<= ("00");
-		data(12)	<= ("00");
-		data(13)	<= ("00");
-		data(14)	<= ("00");
-		data(15)	<= ("00");
-		data(16)	<= ("00");
-		data(17)	<= ("00");
-		data(18)	<= ("00");
-		data(19)	<= ("00");
-		data(20)	<= ("00");
-		data(21)	<= ("00");
-		data(22)	<= ("00");
-		data(23)	<= ("00");
-		data(24)	<= ("00");
-		data(25)	<= ("00");
-		data(26)	<= ("00");
-		data(27)	<= ("00");
-		data(28)	<= ("00");
-		data(29)	<= ("00");
-		data(30)	<= ("00");
-		data(31)	<= ("00");
+		data(0)	<= ("000");
+		data(1)	<= ("000");
+		data(2)	<= ("000");
+		data(3)	<= ("000");
+		data(4)	<= ("000");
+		data(5)	<= ("000");
+		data(6)	<= ("000");
+		data(7)	<= ("000");
+		data(8)	<= ("000");
+		data(9)	<= ("000");
+		data(10)	<= ("000");
+		data(11)	<= ("000");
+		data(12)	<= ("000");
+		data(13)	<= ("000");
+		data(14)	<= ("000");
+		data(15)	<= ("000");
+		data(16)	<= ("000");
+		data(17)	<= ("000");
+		data(18)	<= ("000");
+		data(19)	<= ("000");
+		data(20)	<= ("000");
+		data(21)	<= ("000");
+		data(22)	<= ("000");
+		data(23)	<= ("000");
+		data(24)	<= ("000");
+		data(25)	<= ("000");
+		data(26)	<= ("000");
+		data(27)	<= ("000");
+		data(28)	<= ("000");
+		data(29)	<= ("000");
+		data(30)	<= ("000");
+		data(31)	<= ("000");
 		
     count<= 0;
     --full <= '0';
