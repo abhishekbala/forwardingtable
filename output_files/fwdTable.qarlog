@@ -1,0 +1,25 @@
+Quartus II Archive log --	C:/Users/anb17/Downloads/forwardingtable-master/forwardingtable-master/output_files/fwdTable.qarlog
+
+Archive:	C:/Users/anb17/Downloads/forwardingtable-master/forwardingtable-master/output_files/fwdTable.qar
+Date:		Thu Nov 06 12:16:49 2014
+Quartus II 64-Bit		13.0.0 Build 156 04/24/2013 SJ Full Version
+
+	=========== Files Selected: ===========
+C:/Users/anb17/Downloads/forwardingtable-master/forwardingtable-master/CAM_FSM.vhd
+C:/Users/anb17/Downloads/forwardingtable-master/forwardingtable-master/TestBenchVWF.vwf
+C:/Users/anb17/Downloads/forwardingtable-master/forwardingtable-master/camTestBench.vhd
+C:/Users/anb17/Downloads/forwardingtable-master/forwardingtable-master/counter12.vhd
+C:/Users/anb17/Downloads/forwardingtable-master/forwardingtable-master/db/fwdTable.sim.vwf
+C:/Users/anb17/Downloads/forwardingtable-master/forwardingtable-master/fwdTable.qpf
+C:/Users/anb17/Downloads/forwardingtable-master/forwardingtable-master/fwdTable.qsf
+C:/Users/anb17/Downloads/forwardingtable-master/forwardingtable-master/fwdTable.vhd
+C:/Users/anb17/Downloads/forwardingtable-master/forwardingtable-master/fwdTable_assignment_defaults.qdf
+C:/Users/anb17/Downloads/forwardingtable-master/forwardingtable-master/incremental_db/compiled_partitions/fwdTable.db_info
+C:/Users/anb17/Downloads/forwardingtable-master/forwardingtable-master/tbrom48.cmp
+C:/Users/anb17/Downloads/forwardingtable-master/forwardingtable-master/tbrom48.mif
+C:/Users/anb17/Downloads/forwardingtable-master/forwardingtable-master/tbrom48.qip
+C:/Users/anb17/Downloads/forwardingtable-master/forwardingtable-master/tbrom48.vhd
+	======= Total: 14 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

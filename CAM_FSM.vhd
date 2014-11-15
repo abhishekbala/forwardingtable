@@ -34,6 +34,7 @@ begin                                     -- begin the architecture definition
 				state_next <= s3;
 			when s3 =>
 				if (port_comparator = '1') then
+					
 					state_next <= s0;
 				else
 					state_next <= s4;

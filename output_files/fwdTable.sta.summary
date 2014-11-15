@@ -3,75 +3,27 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow Model Setup 'Clock'
-Slack : -12.017
-TNS   : -11739.797
-
-Type  : Slow Model Setup 'y_current.checkState'
-Slack : -3.989
-TNS   : -7.013
-
-Type  : Slow Model Setup 'counter12:Counter12Bit|lpm_counter:lpm_counter_component|cntr_0pi:auto_generated|safe_q[0]'
-Slack : -3.322
-TNS   : -65.839
+Slack : -11.223
+TNS   : -10705.657
 
 Type  : Slow Model Hold 'Clock'
-Slack : -2.166
-TNS   : -64.960
-
-Type  : Slow Model Hold 'counter12:Counter12Bit|lpm_counter:lpm_counter_component|cntr_0pi:auto_generated|safe_q[0]'
-Slack : -0.685
-TNS   : -0.778
-
-Type  : Slow Model Hold 'y_current.checkState'
-Slack : 0.350
+Slack : 0.391
 TNS   : 0.000
 
 Type  : Slow Model Minimum Pulse Width 'Clock'
 Slack : -1.423
-TNS   : -3365.286
-
-Type  : Slow Model Minimum Pulse Width 'counter12:Counter12Bit|lpm_counter:lpm_counter_component|cntr_0pi:auto_generated|safe_q[0]'
-Slack : 0.500
-TNS   : 0.000
-
-Type  : Slow Model Minimum Pulse Width 'y_current.checkState'
-Slack : 0.500
-TNS   : 0.000
+TNS   : -3371.284
 
 Type  : Fast Model Setup 'Clock'
-Slack : -4.898
-TNS   : -3874.304
-
-Type  : Fast Model Setup 'y_current.checkState'
-Slack : -1.504
-TNS   : -2.611
-
-Type  : Fast Model Setup 'counter12:Counter12Bit|lpm_counter:lpm_counter_component|cntr_0pi:auto_generated|safe_q[0]'
-Slack : -1.266
-TNS   : -20.849
+Slack : -4.494
+TNS   : -3815.658
 
 Type  : Fast Model Hold 'Clock'
-Slack : -1.448
-TNS   : -59.309
-
-Type  : Fast Model Hold 'y_current.checkState'
-Slack : 0.160
-TNS   : 0.000
-
-Type  : Fast Model Hold 'counter12:Counter12Bit|lpm_counter:lpm_counter_component|cntr_0pi:auto_generated|safe_q[0]'
-Slack : 0.232
+Slack : 0.215
 TNS   : 0.000
 
 Type  : Fast Model Minimum Pulse Width 'Clock'
 Slack : -1.423
-TNS   : -3365.286
-
-Type  : Fast Model Minimum Pulse Width 'counter12:Counter12Bit|lpm_counter:lpm_counter_component|cntr_0pi:auto_generated|safe_q[0]'
-Slack : 0.500
-TNS   : 0.000
-
-Type  : Fast Model Minimum Pulse Width 'y_current.checkState'
-Slack : 0.500
-TNS   : 0.000
+TNS   : -3371.284
 
 ------------------------------------------------------------

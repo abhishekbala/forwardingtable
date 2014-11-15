@@ -19,8 +19,8 @@
 # Loading cycloneii_ver.cycloneii_ram_block
 # Loading cycloneii_ver.cycloneii_ram_register
 # Loading cycloneii_ver.cycloneii_ram_pulse_generator
-# Loading cycloneii_ver.cycloneii_lcell_ff
 # Loading cycloneii_ver.cycloneii_lcell_comb
+# Loading cycloneii_ver.cycloneii_lcell_ff
 # Loading cycloneii_ver.cycloneii_io
 # Loading cycloneii_ver.cycloneii_mux21
 # Loading cycloneii_ver.cycloneii_dffe
@@ -41,5 +41,5 @@
 # ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
 #    Time: 0 ps  Iteration: 0  Instance: /camTestBench_vlg_vec_tst File: fwdTable.vt
 # Simulation passed !
-# ** Note: $finish    : fwdTable.vt(266)
+# ** Note: $finish    : fwdTable.vt(519)
 #    Time: 1 us  Iteration: 0  Instance: /camTestBench_vlg_vec_tst/tb_out

@@ -1,0 +1,27 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+entity compare is
+  port (
+			cam_data_out : in STD_LOGIC_VECTOR(2 downto 0);
+			sp_reg : in STD_LOGIC_VECTOR(2 downto 0);
+			port_comparator : out STD_LOGIC  );
+end compare;
+
+architecture comparator of compare is
+
+
+begin                                     -- begin the architecture definition
+	
+	process (cam_data_out, sp_reg) -- next state logic
+	begin
+		if(sp_reg /= cam_data_out OR cam_data_out = "111") then
+			port_comparator <= '0';
+		else
+			port_comparator <= '1';
+		end if;
+	 end process;
+	
+	
+	
+end comparator;

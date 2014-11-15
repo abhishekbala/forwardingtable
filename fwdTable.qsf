@@ -52,13 +52,6 @@ set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name SIMULATION_MODE TIMING
 set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
-set_global_assignment -name VHDL_FILE CAM_FSM.vhd
-set_global_assignment -name VHDL_FILE fwdTable.vhd
-set_global_assignment -name VHDL_FILE camTestBench.vhd
-set_global_assignment -name VHDL_FILE counter12.vhd
-set_global_assignment -name VECTOR_WAVEFORM_FILE TestBenchVWF.vwf
-set_global_assignment -name MIF_FILE tbrom48.mif
-set_global_assignment -name VHDL_FILE tbrom48.vhd
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_simulation
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -66,13 +59,31 @@ set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name TIMEQUEST_DO_CCPP_REMOVAL OFF
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
-set_location_assignment PIN_N2 -to Clock
-set_location_assignment PIN_U6 -to Reset
-set_location_assignment PIN_AE15 -to data_out[2]
-set_location_assignment PIN_AD15 -to data_out[1]
-set_location_assignment PIN_AC15 -to data_out[0]
-set_location_assignment PIN_AD12 -to read_state
-set_location_assignment PIN_AF23 -to start_out
-set_location_assignment PIN_AB21 -to test_good
+set_location_assignment PIN_D25 -to Clock
+set_location_assignment PIN_F23 -to Reset
+set_location_assignment PIN_E25 -to data_out[2]
+set_location_assignment PIN_E26 -to data_out[1]
+set_location_assignment PIN_J22 -to data_out[0]
+set_location_assignment PIN_F24 -to read_state
+set_location_assignment PIN_J21 -to start_out
+set_location_assignment PIN_J20 -to test_good
+set_global_assignment -name VECTOR_OUTPUT_FORMAT VWF
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/anb17/Downloads/forwardingtable-master/forwardingtable-master/TestBenchVWF.vwf"
+set_location_assignment PIN_F25 -to trigger
+set_global_assignment -name VHDL_FILE ../../../Desktop/tristate16.vhd
+set_global_assignment -name VHDL_FILE ../../../Desktop/tristate.vhd
+set_global_assignment -name VHDL_FILE ../../../Desktop/entity_table.vhd
+set_global_assignment -name VHDL_FILE CAM_FSM.vhd
+set_global_assignment -name VHDL_FILE fwdTable.vhd
+set_global_assignment -name VHDL_FILE camTestBench.vhd
+set_global_assignment -name VHDL_FILE counter12.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE TestBenchVWF.vwf
+set_global_assignment -name MIF_FILE tbrom48.mif
+set_global_assignment -name VHDL_FILE tbrom48.vhd
+set_global_assignment -name QIP_FILE tbrom48.qip
+set_global_assignment -name VHDL_FILE compare.vhd
+set_global_assignment -name VHDL_FILE reg3.vhd
+set_global_assignment -name VHDL_FILE reg48.vhd
+set_global_assignment -name VHDL_FILE tristate3.vhd
+set_global_assignment -name VHDL_FILE tristate48.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Duke/Duke/Senior/ECE 559/FinalProject/forwardingtable-master/TestBenchVWF.vwf"

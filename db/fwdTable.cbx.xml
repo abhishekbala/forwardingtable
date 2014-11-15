@@ -2,6 +2,6 @@
 <LOG_ROOT>
 	<PROJECT NAME="fwdTable">
 		<CBX_INST_ENTRY INSTANCE_NAME="|camTestBench|counter12:Counter12Bit|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_0pi.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|camTestBench|tbrom48:cam_test_mem|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_js71.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|camTestBench|tbrom48:cam_test_mem|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_ks71.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

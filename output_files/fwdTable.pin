@@ -63,7 +63,7 @@
  -- Pin directions (input, output or bidir) are based on device operating in user mode.
  ---------------------------------------------------------------------------------
 
-Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 CHIP  "fwdTable"  ASSIGNED TO AN: EP2C35F672C6
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
@@ -638,10 +638,10 @@ GND*                         : T25       :        :                   :         
 VCCIO6                       : T26       : power  :                   : 3.3V    : 6         :                
 GND*                         : U1        :        :                   :         : 1         :                
 GND*                         : U2        :        :                   :         : 1         :                
-GND*                         : U3        :        :                   :         : 1         :                
-GND*                         : U4        :        :                   :         : 1         :                
+Reset                        : U3        : input  : 3.3-V LVTTL       :         : 1         : Y              
+trigger                      : U4        : input  : 3.3-V LVTTL       :         : 1         : Y              
 GND*                         : U5        :        :                   :         : 1         :                
-Reset                        : U6        : input  : 3.3-V LVTTL       :         : 1         : Y              
+GND*                         : U6        :        :                   :         : 1         :                
 GND*                         : U7        :        :                   :         : 1         :                
 GND                          : U8        : gnd    :                   :         :           :                
 GND*                         : U9        :        :                   :         : 1         :                
