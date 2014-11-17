@@ -132,7 +132,8 @@ BEGIN
           hit <= '1';                    --   Found Match
           data_out <= data ( conv_integer (addr));
         ELSE
-          --hit <= '0';                    --   No match found
+          --hit <= 0;			 --   No match found
+			 data_out <= "111";
         END IF;
       END LOOP;
     END IF; 
