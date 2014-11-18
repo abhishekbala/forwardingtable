@@ -127,13 +127,14 @@ BEGIN
 --  Stack CAM Read  Operation
 ---------------------------------------------------------------------------
     ELSIF (wr_b = '0' and rd_b = '1') THEN
+		hit <= '0';
+		data_out <= '111';
       FOR addr IN 0 TO 31 LOOP             --   Check for data
-        IF ( tagin = tag(conv_integer (addr))) THEN
+        IF (tagin = tag(conv_integer (addr))) THEN
           hit <= '1';                    --   Found Match
-          data_out <= data ( conv_integer (addr));
+          data_out <= data (conv_integer (addr));
         ELSE
-          hit <= '0';			 --   No match found
-			 data_out <= "111";
+          --hit <= '0';			 --   No match found
         END IF;
       END LOOP;
     END IF; 
