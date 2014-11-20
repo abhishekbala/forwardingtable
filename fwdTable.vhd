@@ -101,16 +101,15 @@ BEGIN
 		data(30)	<= ("000");
 		data(31)	<= ("000");
 		
-    count<= 0;
-    --full <= '0';
+    count <= 0;
  -----------------------------------------------------------------------
  --  Stack Write Operation
  -----------------------------------------------------------------------
   ELSIF ( clk'EVENT and clk='1') THEN
-    IF (wr_b = '1' and rd_b = '0') THEN
-		hit <= '0';
+	 hit <= '0';
+	 data_out <= "111";
+	 IF (wr_b = '1' and rd_b = '0') THEN
       IF ( count = 31 ) THEN
-		  --count <= 0;
 		  tag (conv_integer (count))<= tagin;
         data(conv_integer (count))<= datain;
         count <= 0;  
@@ -119,22 +118,14 @@ BEGIN
         data(conv_integer (count))<= datain;
         count <= count +1;
       END IF;
-	 ELSIF (wr_b = '1' and rd_b = '1') THEN
-		hit <= '0';
-	 ELSIF (wr_b = '0' and rd_b = '0') THEN
-		hit <= '0';
 ---------------------------------------------------------------------------
 --  Stack CAM Read  Operation
 ---------------------------------------------------------------------------
     ELSIF (wr_b = '0' and rd_b = '1') THEN
-		hit <= '0';
-		data_out <= '111';
       FOR addr IN 0 TO 31 LOOP             --   Check for data
         IF (tagin = tag(conv_integer (addr))) THEN
           hit <= '1';                    --   Found Match
           data_out <= data (conv_integer (addr));
-        ELSE
-          --hit <= '0';			 --   No match found
         END IF;
       END LOOP;
     END IF; 
