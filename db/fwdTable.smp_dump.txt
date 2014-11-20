@@ -1,9 +1,9 @@
 
-State Machine - |camTestBench|y_current
-Name y_current.doneState y_current.checkState y_current.readState y_current.writeState y_current.waitState y_current.resetState 
-y_current.resetState 0 0 0 0 0 0 
-y_current.waitState 0 0 0 0 1 1 
-y_current.writeState 0 0 0 1 0 1 
-y_current.readState 0 0 1 0 0 1 
-y_current.checkState 0 1 0 0 0 1 
-y_current.doneState 1 0 0 0 0 1 
+State Machine - |entity_table|CAM_FSM:Finite_State_Machine|state_reg
+Name state_reg.s4 state_reg.s3 state_reg.s2 state_reg.s1 state_reg.sWait state_reg.s0 
+state_reg.s0 0 0 0 0 0 0 
+state_reg.sWait 0 0 0 0 1 1 
+state_reg.s1 0 0 0 1 0 1 
+state_reg.s2 0 0 1 0 0 1 
+state_reg.s3 0 1 0 0 0 1 
+state_reg.s4 1 0 0 0 0 1 

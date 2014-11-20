@@ -6,7 +6,8 @@ entity CAM_FSM is
 			port_comparator : in STD_LOGIC;
 			fwd_ready : in STD_LOGIC;
 			tbl_ready : out STD_LOGIC;
-			read_SA, read_DA, write_SP : out STD_LOGIC );
+			read_SA, read_DA, write_SP : out STD_LOGIC;
+			clk_enable_SA, clk_enable_DA, clk_enable_SP : out STD_LOGIC );
 end CAM_FSM;
 
 architecture mult_seg_arch of CAM_FSM is
@@ -25,30 +26,50 @@ begin                                     -- begin the architecture definition
 		end if;
 	end process;
 	
-	process (state_reg, port_comparator) -- next state logic
+	process (state_reg, fwd_ready, port_comparator) -- next state logic
 	begin
 		case state_reg is
 			when s0 =>
 				if (fwd_ready = '1') then
 					state_next <= sWait;
+				clk_enable_DA <= '1';
+				clk_enable_SA <= '1';
+				clk_enable_SP <= '1';
 				else
 					state_next <= s0;
+					clk_enable_DA <= '0';
+					clk_enable_SA <= '0';
+					clk_enable_SP <= '0';
 				end if;
 			when sWait =>
 				state_next <= s1;
+				clk_enable_DA <= '0';
+				clk_enable_SA <= '0';
+				clk_enable_SP <= '0';
 			when s1 =>
 				state_next <= s2;
+				clk_enable_DA <= '0';
+				clk_enable_SA <= '0';
+				clk_enable_SP <= '0';
 			when s2 =>
 				state_next <= s3;
+				clk_enable_DA <= '0';
+				clk_enable_SA <= '0';
+				clk_enable_SP <= '0';
 			when s3 =>
 				if (port_comparator = '1') then
-					
 					state_next <= s0;
 				else
 					state_next <= s4;
 				end if;
+				clk_enable_DA <= '0';
+				clk_enable_SA <= '0';
+				clk_enable_SP <= '0';
 			when s4 =>
 				state_next <= s0;
+				clk_enable_DA <= '0';
+				clk_enable_SA <= '0';
+				clk_enable_SP <= '0';
 		end case;
 	 end process;
 

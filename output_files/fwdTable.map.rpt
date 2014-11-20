@@ -1,5 +1,5 @@
 Analysis & Synthesis report for fwdTable
-Fri Nov 14 18:12:14 2014
+Wed Nov 19 22:12:37 2014
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -13,20 +13,10 @@ Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis RAM Summary
-  9. Analysis & Synthesis IP Cores Summary
- 10. State Machine - |camTestBench|y_current
- 11. User-Specified and Inferred Latches
- 12. Registers Removed During Synthesis
- 13. General Register Statistics
- 14. Multiplexer Restructuring Statistics (Restructuring Performed)
- 15. Source assignments for tbrom48:cam_test_mem|altsyncram:altsyncram_component|altsyncram_ks71:auto_generated
- 16. Parameter Settings for User Entity Instance: tbrom48:cam_test_mem|altsyncram:altsyncram_component
- 17. Parameter Settings for User Entity Instance: counter12:Counter12Bit|lpm_counter:lpm_counter_component
- 18. altsyncram Parameter Settings by Entity Instance
- 19. Port Connectivity Checks: "fwdTable:CAM"
- 20. Elapsed Time Per Partition
- 21. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -52,18 +42,18 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 14 18:12:14 2014       ;
+; Analysis & Synthesis Status        ; Successful - Wed Nov 19 22:12:37 2014       ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
 ; Revision Name                      ; fwdTable                                    ;
-; Top-level Entity Name              ; camTestBench                                ;
+; Top-level Entity Name              ; fwdTable                                    ;
 ; Family                             ; Cyclone II                                  ;
-; Total logic elements               ; 2,775                                       ;
-;     Total combinational functions  ; 1,255                                       ;
-;     Dedicated logic registers      ; 1,594                                       ;
-; Total registers                    ; 1594                                        ;
-; Total pins                         ; 9                                           ;
+; Total logic elements               ; 2,798                                       ;
+;     Total combinational functions  ; 1,166                                       ;
+;     Dedicated logic registers      ; 1,641                                       ;
+; Total registers                    ; 1641                                        ;
+; Total pins                         ; 59                                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 196,608                                     ;
+; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
 ; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
@@ -75,7 +65,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP2C35F672C6       ;                    ;
-; Top-level entity name                                                      ; camTestBench       ; fwdTable           ;
+; Top-level entity name                                                      ; fwdTable           ; fwdTable           ;
 ; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -171,206 +161,53 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                          ;
-+----------------------------------+-----------------+----------------------------------+-----------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                        ; File Name with Absolute Path                                                                  ; Library ;
-+----------------------------------+-----------------+----------------------------------+-----------------------------------------------------------------------------------------------+---------+
-; fwdTable.vhd                     ; yes             ; User VHDL File                   ; C:/Users/anb17/Downloads/forwardingtable-master/forwardingtable-master/fwdTable.vhd           ;         ;
-; camTestBench.vhd                 ; yes             ; User VHDL File                   ; C:/Users/anb17/Downloads/forwardingtable-master/forwardingtable-master/camTestBench.vhd       ;         ;
-; counter12.vhd                    ; yes             ; User Wizard-Generated File       ; C:/Users/anb17/Downloads/forwardingtable-master/forwardingtable-master/counter12.vhd          ;         ;
-; tbrom48.mif                      ; yes             ; User Memory Initialization File  ; C:/Users/anb17/Downloads/forwardingtable-master/forwardingtable-master/tbrom48.mif            ;         ;
-; tbrom48.vhd                      ; yes             ; User Wizard-Generated File       ; C:/Users/anb17/Downloads/forwardingtable-master/forwardingtable-master/tbrom48.vhd            ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                     ; c:/altera/13.0/quartus/libraries/megafunctions/altsyncram.tdf                                 ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                     ; c:/altera/13.0/quartus/libraries/megafunctions/stratix_ram_block.inc                          ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                     ; c:/altera/13.0/quartus/libraries/megafunctions/lpm_mux.inc                                    ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                     ; c:/altera/13.0/quartus/libraries/megafunctions/lpm_decode.inc                                 ;         ;
-; aglobal130.inc                   ; yes             ; Megafunction                     ; c:/altera/13.0/quartus/libraries/megafunctions/aglobal130.inc                                 ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                     ; c:/altera/13.0/quartus/libraries/megafunctions/a_rdenreg.inc                                  ;         ;
-; altrom.inc                       ; yes             ; Megafunction                     ; c:/altera/13.0/quartus/libraries/megafunctions/altrom.inc                                     ;         ;
-; altram.inc                       ; yes             ; Megafunction                     ; c:/altera/13.0/quartus/libraries/megafunctions/altram.inc                                     ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                     ; c:/altera/13.0/quartus/libraries/megafunctions/altdpram.inc                                   ;         ;
-; db/altsyncram_ks71.tdf           ; yes             ; Auto-Generated Megafunction      ; C:/Users/anb17/Downloads/forwardingtable-master/forwardingtable-master/db/altsyncram_ks71.tdf ;         ;
-; lpm_counter.tdf                  ; yes             ; Megafunction                     ; c:/altera/13.0/quartus/libraries/megafunctions/lpm_counter.tdf                                ;         ;
-; lpm_constant.inc                 ; yes             ; Megafunction                     ; c:/altera/13.0/quartus/libraries/megafunctions/lpm_constant.inc                               ;         ;
-; lpm_add_sub.inc                  ; yes             ; Megafunction                     ; c:/altera/13.0/quartus/libraries/megafunctions/lpm_add_sub.inc                                ;         ;
-; cmpconst.inc                     ; yes             ; Megafunction                     ; c:/altera/13.0/quartus/libraries/megafunctions/cmpconst.inc                                   ;         ;
-; lpm_compare.inc                  ; yes             ; Megafunction                     ; c:/altera/13.0/quartus/libraries/megafunctions/lpm_compare.inc                                ;         ;
-; lpm_counter.inc                  ; yes             ; Megafunction                     ; c:/altera/13.0/quartus/libraries/megafunctions/lpm_counter.inc                                ;         ;
-; dffeea.inc                       ; yes             ; Megafunction                     ; c:/altera/13.0/quartus/libraries/megafunctions/dffeea.inc                                     ;         ;
-; alt_counter_stratix.inc          ; yes             ; Megafunction                     ; c:/altera/13.0/quartus/libraries/megafunctions/alt_counter_stratix.inc                        ;         ;
-; db/cntr_0pi.tdf                  ; yes             ; Auto-Generated Megafunction      ; C:/Users/anb17/Downloads/forwardingtable-master/forwardingtable-master/db/cntr_0pi.tdf        ;         ;
-+----------------------------------+-----------------+----------------------------------+-----------------------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                               ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                        ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------+---------+
+; fwdTable.vhd                     ; yes             ; User VHDL File  ; C:/Users/anb17/Downloads/forwardingtable-master/forwardingtable-master/fwdTable.vhd ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary          ;
-+---------------------------------------------+--------+
-; Resource                                    ; Usage  ;
-+---------------------------------------------+--------+
-; Estimated Total logic elements              ; 2,775  ;
-;                                             ;        ;
-; Total combinational functions               ; 1255   ;
-; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 1103   ;
-;     -- 3 input functions                    ; 84     ;
-;     -- <=2 input functions                  ; 68     ;
-;                                             ;        ;
-; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 1240   ;
-;     -- arithmetic mode                      ; 15     ;
-;                                             ;        ;
-; Total registers                             ; 1594   ;
-;     -- Dedicated logic registers            ; 1594   ;
-;     -- I/O registers                        ; 0      ;
-;                                             ;        ;
-; I/O pins                                    ; 9      ;
-; Total memory bits                           ; 196608 ;
-; Embedded Multiplier 9-bit elements          ; 0      ;
-; Maximum fan-out node                        ; Clock  ;
-; Maximum fan-out                             ; 1642   ;
-; Total fan-out                               ; 11842  ;
-; Average fan-out                             ; 4.08   ;
-+---------------------------------------------+--------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 2,798 ;
+;                                             ;       ;
+; Total combinational functions               ; 1166  ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 1080  ;
+;     -- 3 input functions                    ; 79    ;
+;     -- <=2 input functions                  ; 7     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 1162  ;
+;     -- arithmetic mode                      ; 4     ;
+;                                             ;       ;
+; Total registers                             ; 1641  ;
+;     -- Dedicated logic registers            ; 1641  ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 59    ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 1641  ;
+; Total fan-out                               ; 11134 ;
+; Average fan-out                             ; 3.88  ;
++---------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                      ;
-+-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                               ; Library Name ;
-+-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------+--------------+
-; |camTestBench                             ; 1255 (63)         ; 1594 (6)     ; 196608      ; 0            ; 0       ; 0         ; 9    ; 0            ; |camTestBench                                                                                     ;              ;
-;    |counter12:Counter12Bit|               ; 12 (0)            ; 12 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camTestBench|counter12:Counter12Bit                                                              ;              ;
-;       |lpm_counter:lpm_counter_component| ; 12 (0)            ; 12 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camTestBench|counter12:Counter12Bit|lpm_counter:lpm_counter_component                            ;              ;
-;          |cntr_0pi:auto_generated|        ; 12 (12)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camTestBench|counter12:Counter12Bit|lpm_counter:lpm_counter_component|cntr_0pi:auto_generated    ;              ;
-;    |fwdTable:CAM|                         ; 1180 (1180)       ; 1576 (1576)  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |camTestBench|fwdTable:CAM                                                                        ;              ;
-;    |tbrom48:cam_test_mem|                 ; 0 (0)             ; 0 (0)        ; 196608      ; 0            ; 0       ; 0         ; 0    ; 0            ; |camTestBench|tbrom48:cam_test_mem                                                                ;              ;
-;       |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 196608      ; 0            ; 0       ; 0         ; 0    ; 0            ; |camTestBench|tbrom48:cam_test_mem|altsyncram:altsyncram_component                                ;              ;
-;          |altsyncram_ks71:auto_generated| ; 0 (0)             ; 0 (0)        ; 196608      ; 0            ; 0       ; 0         ; 0    ; 0            ; |camTestBench|tbrom48:cam_test_mem|altsyncram:altsyncram_component|altsyncram_ks71:auto_generated ;              ;
-+-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |fwdTable                  ; 1166 (1166)       ; 1641 (1641)  ; 0           ; 0            ; 0       ; 0         ; 59   ; 0            ; |fwdTable           ;              ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                ;
-+------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------+-------------+
-; Name                                                                                           ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF         ;
-+------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------+-------------+
-; tbrom48:cam_test_mem|altsyncram:altsyncram_component|altsyncram_ks71:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 4096         ; 48           ; --           ; --           ; 196608 ; tbrom48.mif ;
-+------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------+-------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                                                                                       ;
-+--------+--------------+---------+--------------+--------------+--------------------------------------+--------------------------------------------------------------------------------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                      ; IP Include File                                                                      ;
-+--------+--------------+---------+--------------+--------------+--------------------------------------+--------------------------------------------------------------------------------------+
-; Altera ; ROM: 1-PORT  ; 13.0    ; N/A          ; N/A          ; |camTestBench|tbrom48:cam_test_mem   ; C:/Users/anb17/Downloads/forwardingtable-master/forwardingtable-master/tbrom48.vhd   ;
-; Altera ; LPM_COUNTER  ; N/A     ; N/A          ; N/A          ; |camTestBench|counter12:Counter12Bit ; C:/Users/anb17/Downloads/forwardingtable-master/forwardingtable-master/counter12.vhd ;
-+--------+--------------+---------+--------------+--------------+--------------------------------------+--------------------------------------------------------------------------------------+
-
-
-Encoding Type:  One-Hot
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |camTestBench|y_current                                                                                                                     ;
-+----------------------+---------------------+----------------------+---------------------+----------------------+---------------------+----------------------+
-; Name                 ; y_current.doneState ; y_current.checkState ; y_current.readState ; y_current.writeState ; y_current.waitState ; y_current.resetState ;
-+----------------------+---------------------+----------------------+---------------------+----------------------+---------------------+----------------------+
-; y_current.resetState ; 0                   ; 0                    ; 0                   ; 0                    ; 0                   ; 0                    ;
-; y_current.waitState  ; 0                   ; 0                    ; 0                   ; 0                    ; 1                   ; 1                    ;
-; y_current.writeState ; 0                   ; 0                    ; 0                   ; 1                    ; 0                   ; 1                    ;
-; y_current.readState  ; 0                   ; 0                    ; 1                   ; 0                    ; 0                   ; 1                    ;
-; y_current.checkState ; 0                   ; 1                    ; 0                   ; 0                    ; 0                   ; 1                    ;
-; y_current.doneState  ; 1                   ; 0                    ; 0                   ; 0                    ; 0                   ; 1                    ;
-+----------------------+---------------------+----------------------+---------------------+----------------------+---------------------+----------------------+
-
-
-+----------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                ;
-+----------------------------------------------------+----------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal  ; Free of Timing Hazards ;
-+----------------------------------------------------+----------------------+------------------------+
-; y_next.checkState_332                              ; y_current.checkState ; yes                    ;
-; y_next.doneState_324                               ; y_current.checkState ; yes                    ;
-; y_next.waitState_356                               ; y_current.checkState ; yes                    ;
-; y_next.readState_340                               ; y_current.checkState ; yes                    ;
-; y_next.writeState_348                              ; y_current.checkState ; yes                    ;
-; Number of user-specified and inferred latches = 5  ;                      ;                        ;
-+----------------------------------------------------+----------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
-
-
-+-------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                            ;
-+----------------------------------------+--------------------------------------+
-; Register name                          ; Reason for Removal                   ;
-+----------------------------------------+--------------------------------------+
-; fwdTable:CAM|tag[0][2]                 ; Merged with fwdTable:CAM|data[0][2]  ;
-; fwdTable:CAM|tag[0][0]                 ; Merged with fwdTable:CAM|data[0][0]  ;
-; fwdTable:CAM|tag[1][2]                 ; Merged with fwdTable:CAM|data[1][2]  ;
-; fwdTable:CAM|tag[1][0]                 ; Merged with fwdTable:CAM|data[1][0]  ;
-; fwdTable:CAM|tag[2][2]                 ; Merged with fwdTable:CAM|data[2][2]  ;
-; fwdTable:CAM|tag[2][0]                 ; Merged with fwdTable:CAM|data[2][0]  ;
-; fwdTable:CAM|tag[3][2]                 ; Merged with fwdTable:CAM|data[3][2]  ;
-; fwdTable:CAM|tag[3][0]                 ; Merged with fwdTable:CAM|data[3][0]  ;
-; fwdTable:CAM|tag[4][2]                 ; Merged with fwdTable:CAM|data[4][2]  ;
-; fwdTable:CAM|tag[4][0]                 ; Merged with fwdTable:CAM|data[4][0]  ;
-; fwdTable:CAM|tag[5][2]                 ; Merged with fwdTable:CAM|data[5][2]  ;
-; fwdTable:CAM|tag[5][0]                 ; Merged with fwdTable:CAM|data[5][0]  ;
-; fwdTable:CAM|tag[6][2]                 ; Merged with fwdTable:CAM|data[6][2]  ;
-; fwdTable:CAM|tag[6][0]                 ; Merged with fwdTable:CAM|data[6][0]  ;
-; fwdTable:CAM|tag[7][2]                 ; Merged with fwdTable:CAM|data[7][2]  ;
-; fwdTable:CAM|tag[7][0]                 ; Merged with fwdTable:CAM|data[7][0]  ;
-; fwdTable:CAM|tag[8][2]                 ; Merged with fwdTable:CAM|data[8][2]  ;
-; fwdTable:CAM|tag[8][0]                 ; Merged with fwdTable:CAM|data[8][0]  ;
-; fwdTable:CAM|tag[9][2]                 ; Merged with fwdTable:CAM|data[9][2]  ;
-; fwdTable:CAM|tag[9][0]                 ; Merged with fwdTable:CAM|data[9][0]  ;
-; fwdTable:CAM|tag[10][2]                ; Merged with fwdTable:CAM|data[10][2] ;
-; fwdTable:CAM|tag[10][0]                ; Merged with fwdTable:CAM|data[10][0] ;
-; fwdTable:CAM|tag[11][2]                ; Merged with fwdTable:CAM|data[11][2] ;
-; fwdTable:CAM|tag[11][0]                ; Merged with fwdTable:CAM|data[11][0] ;
-; fwdTable:CAM|tag[12][2]                ; Merged with fwdTable:CAM|data[12][2] ;
-; fwdTable:CAM|tag[12][0]                ; Merged with fwdTable:CAM|data[12][0] ;
-; fwdTable:CAM|tag[13][2]                ; Merged with fwdTable:CAM|data[13][2] ;
-; fwdTable:CAM|tag[13][0]                ; Merged with fwdTable:CAM|data[13][0] ;
-; fwdTable:CAM|tag[14][2]                ; Merged with fwdTable:CAM|data[14][2] ;
-; fwdTable:CAM|tag[14][0]                ; Merged with fwdTable:CAM|data[14][0] ;
-; fwdTable:CAM|tag[15][2]                ; Merged with fwdTable:CAM|data[15][2] ;
-; fwdTable:CAM|tag[15][0]                ; Merged with fwdTable:CAM|data[15][0] ;
-; fwdTable:CAM|tag[16][2]                ; Merged with fwdTable:CAM|data[16][2] ;
-; fwdTable:CAM|tag[16][0]                ; Merged with fwdTable:CAM|data[16][0] ;
-; fwdTable:CAM|tag[17][2]                ; Merged with fwdTable:CAM|data[17][2] ;
-; fwdTable:CAM|tag[17][0]                ; Merged with fwdTable:CAM|data[17][0] ;
-; fwdTable:CAM|tag[18][2]                ; Merged with fwdTable:CAM|data[18][2] ;
-; fwdTable:CAM|tag[18][0]                ; Merged with fwdTable:CAM|data[18][0] ;
-; fwdTable:CAM|tag[19][2]                ; Merged with fwdTable:CAM|data[19][2] ;
-; fwdTable:CAM|tag[19][0]                ; Merged with fwdTable:CAM|data[19][0] ;
-; fwdTable:CAM|tag[20][2]                ; Merged with fwdTable:CAM|data[20][2] ;
-; fwdTable:CAM|tag[20][0]                ; Merged with fwdTable:CAM|data[20][0] ;
-; fwdTable:CAM|tag[21][2]                ; Merged with fwdTable:CAM|data[21][2] ;
-; fwdTable:CAM|tag[21][0]                ; Merged with fwdTable:CAM|data[21][0] ;
-; fwdTable:CAM|tag[22][2]                ; Merged with fwdTable:CAM|data[22][2] ;
-; fwdTable:CAM|tag[22][0]                ; Merged with fwdTable:CAM|data[22][0] ;
-; fwdTable:CAM|tag[23][2]                ; Merged with fwdTable:CAM|data[23][2] ;
-; fwdTable:CAM|tag[23][0]                ; Merged with fwdTable:CAM|data[23][0] ;
-; fwdTable:CAM|tag[24][2]                ; Merged with fwdTable:CAM|data[24][2] ;
-; fwdTable:CAM|tag[24][0]                ; Merged with fwdTable:CAM|data[24][0] ;
-; fwdTable:CAM|tag[25][2]                ; Merged with fwdTable:CAM|data[25][2] ;
-; fwdTable:CAM|tag[25][0]                ; Merged with fwdTable:CAM|data[25][0] ;
-; fwdTable:CAM|tag[26][2]                ; Merged with fwdTable:CAM|data[26][2] ;
-; fwdTable:CAM|tag[26][0]                ; Merged with fwdTable:CAM|data[26][0] ;
-; fwdTable:CAM|tag[27][2]                ; Merged with fwdTable:CAM|data[27][2] ;
-; fwdTable:CAM|tag[27][0]                ; Merged with fwdTable:CAM|data[27][0] ;
-; fwdTable:CAM|tag[28][2]                ; Merged with fwdTable:CAM|data[28][2] ;
-; fwdTable:CAM|tag[28][0]                ; Merged with fwdTable:CAM|data[28][0] ;
-; fwdTable:CAM|tag[29][2]                ; Merged with fwdTable:CAM|data[29][2] ;
-; fwdTable:CAM|tag[29][0]                ; Merged with fwdTable:CAM|data[29][0] ;
-; fwdTable:CAM|tag[30][2]                ; Merged with fwdTable:CAM|data[30][2] ;
-; fwdTable:CAM|tag[30][0]                ; Merged with fwdTable:CAM|data[30][0] ;
-; fwdTable:CAM|tag[31][2]                ; Merged with fwdTable:CAM|data[31][2] ;
-; fwdTable:CAM|tag[31][0]                ; Merged with fwdTable:CAM|data[31][0] ;
-; Total Number of Removed Registers = 64 ;                                      ;
-+----------------------------------------+--------------------------------------+
 
 
 +------------------------------------------------------+
@@ -378,150 +215,23 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1594  ;
+; Total registers                              ; 1641  ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 1591  ;
+; Number of registers using Asynchronous Clear ; 1637  ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 1588  ;
+; Number of registers using Clock Enable       ; 1641  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
-; 33:1               ; 3 bits    ; 66 LEs        ; 63 LEs               ; 3 LEs                  ; Yes        ; |camTestBench|fwdTable:CAM|data_out[0] ;
-; 3:1                ; 47 bits   ; 94 LEs        ; 47 LEs               ; 47 LEs                 ; No         ; |camTestBench|tag_in[36]               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------+
-; Source assignments for tbrom48:cam_test_mem|altsyncram:altsyncram_component|altsyncram_ks71:auto_generated ;
-+---------------------------------+--------------------+------+----------------------------------------------+
-; Assignment                      ; Value              ; From ; To                                           ;
-+---------------------------------+--------------------+------+----------------------------------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                            ;
-+---------------------------------+--------------------+------+----------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: tbrom48:cam_test_mem|altsyncram:altsyncram_component ;
-+------------------------------------+----------------------+---------------------------------------+
-; Parameter Name                     ; Value                ; Type                                  ;
-+------------------------------------+----------------------+---------------------------------------+
-; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                               ;
-; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                            ;
-; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                          ;
-; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                          ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                        ;
-; WIDTH_BYTEENA                      ; 1                    ; Untyped                               ;
-; OPERATION_MODE                     ; ROM                  ; Untyped                               ;
-; WIDTH_A                            ; 48                   ; Signed Integer                        ;
-; WIDTHAD_A                          ; 12                   ; Signed Integer                        ;
-; NUMWORDS_A                         ; 4096                 ; Signed Integer                        ;
-; OUTDATA_REG_A                      ; CLOCK0               ; Untyped                               ;
-; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                               ;
-; OUTDATA_ACLR_A                     ; CLEAR0               ; Untyped                               ;
-; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                               ;
-; INDATA_ACLR_A                      ; NONE                 ; Untyped                               ;
-; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                               ;
-; WIDTH_B                            ; 1                    ; Untyped                               ;
-; WIDTHAD_B                          ; 1                    ; Untyped                               ;
-; NUMWORDS_B                         ; 1                    ; Untyped                               ;
-; INDATA_REG_B                       ; CLOCK1               ; Untyped                               ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                               ;
-; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                               ;
-; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                               ;
-; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                               ;
-; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                               ;
-; INDATA_ACLR_B                      ; NONE                 ; Untyped                               ;
-; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                               ;
-; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                               ;
-; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                               ;
-; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                               ;
-; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                               ;
-; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                        ;
-; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                               ;
-; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                               ;
-; BYTE_SIZE                          ; 8                    ; Untyped                               ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                               ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                               ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                               ;
-; INIT_FILE                          ; tbrom48.mif          ; Untyped                               ;
-; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                               ;
-; MAXIMUM_DEPTH                      ; 0                    ; Untyped                               ;
-; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                               ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                               ;
-; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                               ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                               ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                               ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                               ;
-; ENABLE_ECC                         ; FALSE                ; Untyped                               ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                               ;
-; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                               ;
-; DEVICE_FAMILY                      ; Cyclone II           ; Untyped                               ;
-; CBXI_PARAMETER                     ; altsyncram_ks71      ; Untyped                               ;
-+------------------------------------+----------------------+---------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: counter12:Counter12Bit|lpm_counter:lpm_counter_component ;
-+------------------------+-------------+----------------------------------------------------------------+
-; Parameter Name         ; Value       ; Type                                                           ;
-+------------------------+-------------+----------------------------------------------------------------+
-; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                     ;
-; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                   ;
-; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                   ;
-; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                 ;
-; LPM_WIDTH              ; 12          ; Signed Integer                                                 ;
-; LPM_DIRECTION          ; UP          ; Untyped                                                        ;
-; LPM_MODULUS            ; 0           ; Untyped                                                        ;
-; LPM_AVALUE             ; UNUSED      ; Untyped                                                        ;
-; LPM_SVALUE             ; UNUSED      ; Untyped                                                        ;
-; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                        ;
-; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                        ;
-; CARRY_CHAIN            ; MANUAL      ; Untyped                                                        ;
-; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                             ;
-; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                             ;
-; CARRY_CNT_EN           ; SMART       ; Untyped                                                        ;
-; LABWIDE_SCLR           ; ON          ; Untyped                                                        ;
-; USE_NEW_VERSION        ; TRUE        ; Untyped                                                        ;
-; CBXI_PARAMETER         ; cntr_0pi    ; Untyped                                                        ;
-+------------------------+-------------+----------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------------+
-; altsyncram Parameter Settings by Entity Instance                                                 ;
-+-------------------------------------------+------------------------------------------------------+
-; Name                                      ; Value                                                ;
-+-------------------------------------------+------------------------------------------------------+
-; Number of entity instances                ; 1                                                    ;
-; Entity Instance                           ; tbrom48:cam_test_mem|altsyncram:altsyncram_component ;
-;     -- OPERATION_MODE                     ; ROM                                                  ;
-;     -- WIDTH_A                            ; 48                                                   ;
-;     -- NUMWORDS_A                         ; 4096                                                 ;
-;     -- OUTDATA_REG_A                      ; CLOCK0                                               ;
-;     -- WIDTH_B                            ; 1                                                    ;
-;     -- NUMWORDS_B                         ; 1                                                    ;
-;     -- ADDRESS_REG_B                      ; CLOCK1                                               ;
-;     -- OUTDATA_REG_B                      ; UNREGISTERED                                         ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                                                 ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                            ;
-+-------------------------------------------+------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "fwdTable:CAM"                                                                       ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; hit  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 35:1               ; 3 bits    ; 69 LEs        ; 63 LEs               ; 6 LEs                  ; Yes        ; |fwdTable|data_out[0]~reg0 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
 +-------------------------------+
@@ -539,18 +249,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
-    Info: Processing started: Fri Nov 14 18:12:03 2014
+    Info: Processing started: Wed Nov 19 22:12:27 2014
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off fwdTable -c fwdTable
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file /users/anb17/desktop/tristate16.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file register3bits.vhd
+    Info (12022): Found design unit 1: register3bits-SYN
+    Info (12023): Found entity 1: register3bits
+Info (12021): Found 2 design units, including 1 entities, in source file register48bits.vhd
+    Info (12022): Found design unit 1: register48bits-SYN
+    Info (12023): Found entity 1: register48bits
+Info (12021): Found 2 design units, including 1 entities, in source file tristate16.vhd
     Info (12022): Found design unit 1: tristate16-behavior
     Info (12023): Found entity 1: tristate16
-Info (12021): Found 2 design units, including 1 entities, in source file /users/anb17/desktop/tristate.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file tristate.vhd
     Info (12022): Found design unit 1: tristate-behavior
     Info (12023): Found entity 1: tristate
-Info (12021): Found 2 design units, including 1 entities, in source file /users/anb17/desktop/entity_table.vhd
-    Info (12022): Found design unit 1: Table-module_interface
-    Info (12023): Found entity 1: Table
+Info (12021): Found 2 design units, including 1 entities, in source file entity_table.vhd
+    Info (12022): Found design unit 1: entity_table-module_interface
+    Info (12023): Found entity 1: entity_table
 Info (12021): Found 2 design units, including 1 entities, in source file cam_fsm.vhd
     Info (12022): Found design unit 1: CAM_FSM-mult_seg_arch
     Info (12023): Found entity 1: CAM_FSM
@@ -581,58 +297,17 @@ Info (12021): Found 2 design units, including 1 entities, in source file tristat
 Info (12021): Found 2 design units, including 1 entities, in source file tristate48.vhd
     Info (12022): Found design unit 1: tristate48-behavior
     Info (12023): Found entity 1: tristate48
-Info (12127): Elaborating entity "camTestBench" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at camTestBench.vhd(63): object "CAM_hit" assigned a value but never read
-Warning (10631): VHDL Process Statement warning at camTestBench.vhd(110): inferring latch(es) for signal or variable "y_next", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "y_next.doneState" at camTestBench.vhd(110)
-Info (10041): Inferred latch for "y_next.checkState" at camTestBench.vhd(110)
-Info (10041): Inferred latch for "y_next.readState" at camTestBench.vhd(110)
-Info (10041): Inferred latch for "y_next.writeState" at camTestBench.vhd(110)
-Info (10041): Inferred latch for "y_next.waitState" at camTestBench.vhd(110)
-Info (10041): Inferred latch for "y_next.resetState" at camTestBench.vhd(110)
-Info (12128): Elaborating entity "fwdTable" for hierarchy "fwdTable:CAM"
-Info (12128): Elaborating entity "tbrom48" for hierarchy "tbrom48:cam_test_mem"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "tbrom48:cam_test_mem|altsyncram:altsyncram_component"
-Info (12130): Elaborated megafunction instantiation "tbrom48:cam_test_mem|altsyncram:altsyncram_component"
-Info (12133): Instantiated megafunction "tbrom48:cam_test_mem|altsyncram:altsyncram_component" with the following parameter:
-    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
-    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
-    Info (12134): Parameter "init_file" = "tbrom48.mif"
-    Info (12134): Parameter "intended_device_family" = "Cyclone II"
-    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
-    Info (12134): Parameter "lpm_type" = "altsyncram"
-    Info (12134): Parameter "numwords_a" = "4096"
-    Info (12134): Parameter "operation_mode" = "ROM"
-    Info (12134): Parameter "outdata_aclr_a" = "CLEAR0"
-    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
-    Info (12134): Parameter "widthad_a" = "12"
-    Info (12134): Parameter "width_a" = "48"
-    Info (12134): Parameter "width_byteena_a" = "1"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ks71.tdf
-    Info (12023): Found entity 1: altsyncram_ks71
-Info (12128): Elaborating entity "altsyncram_ks71" for hierarchy "tbrom48:cam_test_mem|altsyncram:altsyncram_component|altsyncram_ks71:auto_generated"
-Info (12128): Elaborating entity "counter12" for hierarchy "counter12:Counter12Bit"
-Info (12128): Elaborating entity "lpm_counter" for hierarchy "counter12:Counter12Bit|lpm_counter:lpm_counter_component"
-Info (12130): Elaborated megafunction instantiation "counter12:Counter12Bit|lpm_counter:lpm_counter_component"
-Info (12133): Instantiated megafunction "counter12:Counter12Bit|lpm_counter:lpm_counter_component" with the following parameter:
-    Info (12134): Parameter "lpm_direction" = "UP"
-    Info (12134): Parameter "lpm_port_updown" = "PORT_UNUSED"
-    Info (12134): Parameter "lpm_type" = "LPM_COUNTER"
-    Info (12134): Parameter "lpm_width" = "12"
-Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_0pi.tdf
-    Info (12023): Found entity 1: cntr_0pi
-Info (12128): Elaborating entity "cntr_0pi" for hierarchy "counter12:Counter12Bit|lpm_counter:lpm_counter_component|cntr_0pi:auto_generated"
+Info (12127): Elaborating entity "fwdTable" for the top level hierarchy
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 2886 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 6 output pins
-    Info (21061): Implemented 2829 logic cells
-    Info (21064): Implemented 48 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 523 megabytes
-    Info: Processing ended: Fri Nov 14 18:12:14 2014
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:10
+Info (21057): Implemented 2857 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 55 input pins
+    Info (21059): Implemented 4 output pins
+    Info (21061): Implemented 2798 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 508 megabytes
+    Info: Processing ended: Wed Nov 19 22:12:37 2014
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:09
 
 

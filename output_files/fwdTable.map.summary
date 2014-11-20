@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Fri Nov 14 18:12:14 2014
+Analysis & Synthesis Status : Successful - Wed Nov 19 22:12:37 2014
 Quartus II 64-Bit Version : 13.0.0 Build 156 04/24/2013 SJ Full Version
 Revision Name : fwdTable
-Top-level Entity Name : camTestBench
+Top-level Entity Name : fwdTable
 Family : Cyclone II
-Total logic elements : 2,775
-    Total combinational functions : 1,255
-    Dedicated logic registers : 1,594
-Total registers : 1594
-Total pins : 9
+Total logic elements : 2,798
+    Total combinational functions : 1,166
+    Dedicated logic registers : 1,641
+Total registers : 1641
+Total pins : 59
 Total virtual pins : 0
-Total memory bits : 196,608
+Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
 Total PLLs : 0
