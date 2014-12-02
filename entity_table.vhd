@@ -16,14 +16,7 @@ ENTITY entity_table IS
 
 			tbl_ready			: OUT	STD_LOGIC;
 			tbl_data_valid		: OUT	STD_LOGIC;
-			dst_port_data		: OUT	STD_LOGIC_VECTOR(2 downto 0);
-			test_writeCAM		: OUT STD_LOGIC;
-			test_readCAM		: OUT STD_LOGIC;
-			test_tristateOut 	: OUT STD_LOGIC_VECTOR(47 downto 0);
-			test_fsmReadSA		: OUT STD_LOGIC;
-			test_portComp		: OUT STD_LOGIC;
-			test_srcPort		: OUT STD_LOGIC_VECTOR(2 downto 0);
-			test_dataout		: OUT STD_LOGIC_VECTOR(2 downto 0)
+			dst_port_data		: OUT	STD_LOGIC_VECTOR(2 downto 0)
 			);
 END entity_table;
 
@@ -57,11 +50,9 @@ architecture module_interface of entity_table is
 			rst              : IN   STD_LOGIC;                   --   Reset
 			rd_b             : in   STD_LOGIC;                   --   Read
 			wr_b             : in   STD_LOGIC;                   --   Write
-			datain           : in   STD_LOGIC_VECTOR(2 downto 0);-- data in
-																						  -- during write.
+			datain           : in   STD_LOGIC_VECTOR(2 downto 0);-- Write data.
 			tagin            : in   STD_LOGIC_VECTOR(47 downto 0);-- Tag Data
 			data_out         : out  STD_LOGIC_VECTOR(2 downto 0);-- Data out
-			--full             : out  STD_LOGIC;                   -- Stack Full  
 			hit              : out  STD_LOGIC                    -- Found Match  
 		);
 	END COMPONENT;
@@ -95,11 +86,12 @@ architecture module_interface of entity_table is
 	);
 	end COMPONENT;
 	
-	signal tristate_out : STD_LOGIC_VECTOR(47 downto 0);
-	signal FSM_read_SA : STD_LOGIC;
-	signal FSM_read_DA : STD_LOGIC;
-	signal FSM_write_SP : STD_LOGIC;
-	signal dataout : STD_LOGIC_VECTOR(2 downto 0);
+	signal tristate_out 	: STD_LOGIC_VECTOR(47 downto 0);
+	signal FSM_read_SA 	: STD_LOGIC;
+	signal FSM_read_DA 	: STD_LOGIC;
+	signal FSM_write_SP 	: STD_LOGIC;
+	signal dataout 		: STD_LOGIC_VECTOR(2 downto 0);
+	signal table_hit 		: STD_LOGIC;
 	signal port_comparator_signal : STD_LOGIC;
 	signal clk_enable_DA : STD_LOGIC;
 	signal clk_enable_SA : STD_LOGIC;
@@ -108,33 +100,9 @@ architecture module_interface of entity_table is
 	signal reg48_SA_out	: STD_LOGIC_VECTOR(47 downto 0);
 	signal reg3_SP_out	: STD_LOGIC_VECTOR(2 downto 0);
 	
-	-- START
 	begin
-		test_writeCAM <= FSM_write_SP;
-		test_readCAM <= FSM_read_DA OR FSM_read_SA;
-		test_portComp <= port_comparator_signal;
-		test_tristateOut <= tristate_out;
-		test_fsmReadSA <= fsm_read_SA;
-		test_srcPort <= reg3_SP_out;
-		test_dataout <= dataout;
-		
-		CAM: fwdTable PORT MAP (
-			clk => clk,
-			rst => reset,
-			rd_b => FSM_read_DA OR FSM_read_SA,
-			wr_b => FSM_write_SP,
-			datain => reg3_SP_out,
-			tagin => tristate_out,
-			data_out => dataout,
-			hit => tbl_data_valid
-		);
-		
-		COMPARE_PORTS: compare PORT MAP(
-			cam_data_out => dataout,
-			sp_reg => reg3_SP_out,
-			port_comparator => port_comparator_signal
-		);
-		
+	
+		-- Overall finite state machine for table entity
 		Finite_State_Machine: CAM_FSM PORT MAP(
 			clk => clk,
 			reset => reset,
@@ -148,26 +116,8 @@ architecture module_interface of entity_table is
 			clk_enable_SA => clk_enable_SA,
 			clk_enable_SP => clk_enable_SP
 		);
-		
-		src_tristate: tristate48 PORT MAP(
-			data_in => reg48_SA_out,
-			En => fsm_read_SA,
-			data_out => tristate_out
-		);
-		
-		dst_tristate: tristate48 PORT MAP(
-			data_in => reg48_DA_out,
-			En => fsm_read_DA,
-			data_out => tristate_out
-		);
-		
-		data_out_tristate: tristate3 PORT MAP(
-			data_in => dataout,
-			En => fsm_read_SA,
-			data_out => dst_port_data
-		);
-			
-		-- STORING INPUTS IN REGISTERS
+	
+		-- LATCHING INPUTS
 		dst_reg: register48bits PORT MAP(
 			aclr => '0',
 			clock => clk,
@@ -194,5 +144,46 @@ architecture module_interface of entity_table is
 			load => '1',
 			q => reg3_SP_out
 		);
-
+		
+		-- Tristates for tags
+		src_tristate: tristate48 PORT MAP(
+			data_in => reg48_SA_out,
+			En => fsm_read_SA OR fsm_write_SP,
+			data_out => tristate_out
+		);
+		
+		dst_tristate: tristate48 PORT MAP(
+			data_in => reg48_DA_out,
+			En => fsm_read_DA,
+			data_out => tristate_out
+		);
+	
+		-- Content-Addressable Memory Unit
+		CAM: fwdTable PORT MAP (
+			clk => clk,
+			rst => reset,
+			rd_b => FSM_read_DA OR FSM_read_SA,
+			wr_b => FSM_write_SP,
+			datain => reg3_SP_out,
+			tagin => tristate_out,
+			data_out => dataout,
+			hit => table_hit
+		);
+		
+		-- Output from CAM, and at this cycle we need to raise the table data valid
+		data_out_tristate: tristate3 PORT MAP(
+			data_in => dataout,
+			En => fsm_read_SA,
+			data_out => dst_port_data
+		);
+		
+		tbl_data_valid <= fsm_read_SA;
+		
+		-- Compare CAM(SA) to SP_ID
+		COMPARE_PORTS: compare PORT MAP(
+			cam_data_out => dataout,
+			sp_reg => reg3_SP_out,
+			port_comparator => port_comparator_signal
+		);
+		
 end module_interface;

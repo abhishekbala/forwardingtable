@@ -1,0 +1,37 @@
+Quartus II Archive log --	C:/Duke/Duke/Senior/ECE 559/FinalProject/forwardingtable/fwdTable.qarlog
+
+Archive:	C:/Duke/Duke/Senior/ECE 559/FinalProject/forwardingtable/fwdTable.qar
+Date:		Tue Dec 02 12:21:23 2014
+Quartus II 64-Bit		13.0.0 Build 156 04/24/2013 SJ Web Edition
+
+	=========== Files Selected: ===========
+C:/Duke/Duke/Senior/ECE 559/FinalProject/forwardingtable/32ReadWrite.vwf
+C:/Duke/Duke/Senior/ECE 559/FinalProject/forwardingtable/32ReadWrite2.vwf
+C:/Duke/Duke/Senior/ECE 559/FinalProject/forwardingtable/32ReadWrite3.vwf
+C:/Duke/Duke/Senior/ECE 559/FinalProject/forwardingtable/CAM_FSM.vhd
+C:/Duke/Duke/Senior/ECE 559/FinalProject/forwardingtable/comparator48.cmp
+C:/Duke/Duke/Senior/ECE 559/FinalProject/forwardingtable/comparator48.qip
+C:/Duke/Duke/Senior/ECE 559/FinalProject/forwardingtable/comparator48.vhd
+C:/Duke/Duke/Senior/ECE 559/FinalProject/forwardingtable/compare.vhd
+C:/Duke/Duke/Senior/ECE 559/FinalProject/forwardingtable/counter12.vhd
+C:/Duke/Duke/Senior/ECE 559/FinalProject/forwardingtable/db/fwdTable.sim.vwf
+C:/Duke/Duke/Senior/ECE 559/FinalProject/forwardingtable/entity_table.vhd
+C:/Duke/Duke/Senior/ECE 559/FinalProject/forwardingtable/fwdTable.qpf
+C:/Duke/Duke/Senior/ECE 559/FinalProject/forwardingtable/fwdTable.qsf
+C:/Duke/Duke/Senior/ECE 559/FinalProject/forwardingtable/fwdTable.vhd
+C:/Duke/Duke/Senior/ECE 559/FinalProject/forwardingtable/fwdTable_assignment_defaults.qdf
+C:/Duke/Duke/Senior/ECE 559/FinalProject/forwardingtable/incremental_db/compiled_partitions/fwdTable.db_info
+C:/Duke/Duke/Senior/ECE 559/FinalProject/forwardingtable/register3bits.vhd
+C:/Duke/Duke/Senior/ECE 559/FinalProject/forwardingtable/register48bits.vhd
+C:/Duke/Duke/Senior/ECE 559/FinalProject/forwardingtable/test_fwd_ready_on.vwf
+C:/Duke/Duke/Senior/ECE 559/FinalProject/forwardingtable/test_fwd_ready_on2.vwf
+C:/Duke/Duke/Senior/ECE 559/FinalProject/forwardingtable/test_interface.vwf
+C:/Duke/Duke/Senior/ECE 559/FinalProject/forwardingtable/test_registerEnable.vwf
+C:/Duke/Duke/Senior/ECE 559/FinalProject/forwardingtable/tristate.vhd
+C:/Duke/Duke/Senior/ECE 559/FinalProject/forwardingtable/tristate16.vhd
+C:/Duke/Duke/Senior/ECE 559/FinalProject/forwardingtable/tristate3.vhd
+C:/Duke/Duke/Senior/ECE 559/FinalProject/forwardingtable/tristate48.vhd
+	======= Total: 26 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

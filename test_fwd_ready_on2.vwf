@@ -1142,6 +1142,56 @@ SIGNAL("tbl_ready")
 	PARENT = "";
 }
 
+SIGNAL("CAM_FSM:Finite_State_Machine|state_reg.s0")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "";
+}
+
+SIGNAL("CAM_FSM:Finite_State_Machine|state_reg.s1")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "";
+}
+
+SIGNAL("CAM_FSM:Finite_State_Machine|state_reg.s2")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "";
+}
+
+SIGNAL("CAM_FSM:Finite_State_Machine|state_reg.s3")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "";
+}
+
+SIGNAL("CAM_FSM:Finite_State_Machine|state_reg.s4")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = REGISTERED;
+	PARENT = "";
+}
+
 TRANSITION_LIST("clk")
 {
 	NODE
@@ -1486,13 +1536,7 @@ TRANSITION_LIST("dst_mac_data[11]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 90.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 360.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 600.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 770.0;
+		LEVEL 0 FOR 2000.0;
 	}
 }
 
@@ -1501,11 +1545,7 @@ TRANSITION_LIST("dst_mac_data[10]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 90.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 360.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 1430.0;
+		LEVEL 0 FOR 2000.0;
 	}
 }
 
@@ -1514,9 +1554,7 @@ TRANSITION_LIST("dst_mac_data[9]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1170.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 770.0;
+		LEVEL 0 FOR 2000.0;
 	}
 }
 
@@ -1534,13 +1572,7 @@ TRANSITION_LIST("dst_mac_data[7]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 90.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 360.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 600.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 770.0;
+		LEVEL 0 FOR 2000.0;
 	}
 }
 
@@ -1549,11 +1581,7 @@ TRANSITION_LIST("dst_mac_data[6]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 90.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 360.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 1430.0;
+		LEVEL 0 FOR 2000.0;
 	}
 }
 
@@ -1562,9 +1590,9 @@ TRANSITION_LIST("dst_mac_data[5]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1170.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 770.0;
+		LEVEL 0 FOR 1460.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 500.0;
 	}
 }
 
@@ -1573,7 +1601,15 @@ TRANSITION_LIST("dst_mac_data[4]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 2000.0;
+		LEVEL 0 FOR 70.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 370.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 500.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 380.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 500.0;
 	}
 }
 
@@ -1582,13 +1618,13 @@ TRANSITION_LIST("dst_mac_data[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 90.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 360.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 600.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 770.0;
+		LEVEL 0 FOR 490.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 500.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 380.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 500.0;
 	}
 }
 
@@ -1597,11 +1633,11 @@ TRANSITION_LIST("dst_mac_data[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 90.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 360.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 1430.0;
+		LEVEL 0 FOR 70.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 1340.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 500.0;
 	}
 }
 
@@ -1610,9 +1646,7 @@ TRANSITION_LIST("dst_mac_data[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1170.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 770.0;
+		LEVEL 0 FOR 2000.0;
 	}
 }
 
@@ -1621,7 +1655,11 @@ TRANSITION_LIST("dst_mac_data[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 2000.0;
+		LEVEL 0 FOR 490.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 500.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 920.0;
 	}
 }
 
@@ -1660,13 +1698,15 @@ TRANSITION_LIST("fwd_ready")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 90.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 360.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 600.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 770.0;
+		LEVEL 0 FOR 70.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 370.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 500.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 380.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 500.0;
 	}
 }
 
@@ -1675,7 +1715,9 @@ TRANSITION_LIST("reset")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 2000.0;
+		LEVEL 0 FOR 860.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 1100.0;
 	}
 }
 
@@ -2008,13 +2050,7 @@ TRANSITION_LIST("src_mac_data[11]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 90.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 360.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 600.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 770.0;
+		LEVEL 0 FOR 2000.0;
 	}
 }
 
@@ -2032,13 +2068,7 @@ TRANSITION_LIST("src_mac_data[9]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 90.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 360.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 600.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 770.0;
+		LEVEL 0 FOR 2000.0;
 	}
 }
 
@@ -2047,11 +2077,7 @@ TRANSITION_LIST("src_mac_data[8]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 510.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 600.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 770.0;
+		LEVEL 0 FOR 2000.0;
 	}
 }
 
@@ -2060,13 +2086,7 @@ TRANSITION_LIST("src_mac_data[7]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 90.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 360.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 600.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 770.0;
+		LEVEL 0 FOR 2000.0;
 	}
 }
 
@@ -2084,13 +2104,9 @@ TRANSITION_LIST("src_mac_data[5]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 90.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 360.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 600.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 770.0;
+		LEVEL 0 FOR 1040.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 920.0;
 	}
 }
 
@@ -2099,11 +2115,15 @@ TRANSITION_LIST("src_mac_data[4]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 510.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 600.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 770.0;
+		LEVEL 0 FOR 70.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 370.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 500.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 380.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 500.0;
 	}
 }
 
@@ -2112,13 +2132,11 @@ TRANSITION_LIST("src_mac_data[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 90.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 360.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 600.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 770.0;
+		LEVEL 0 FOR 70.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 920.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 920.0;
 	}
 }
 
@@ -2127,7 +2145,13 @@ TRANSITION_LIST("src_mac_data[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 2000.0;
+		LEVEL 0 FOR 490.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 500.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 380.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 500.0;
 	}
 }
 
@@ -2136,13 +2160,7 @@ TRANSITION_LIST("src_mac_data[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 90.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 360.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 600.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 770.0;
+		LEVEL 0 FOR 2000.0;
 	}
 }
 
@@ -2151,11 +2169,9 @@ TRANSITION_LIST("src_mac_data[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 510.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 600.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 770.0;
+		LEVEL 0 FOR 70.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 1880.0;
 	}
 }
 
@@ -2164,9 +2180,11 @@ TRANSITION_LIST("src_port_data[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 90.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 1850.0;
+		LEVEL 0 FOR 70.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 1340.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 500.0;
 	}
 }
 
@@ -2175,7 +2193,13 @@ TRANSITION_LIST("src_port_data[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 2000.0;
+		LEVEL 0 FOR 500.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 500.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 380.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 500.0;
 	}
 }
 
@@ -2184,11 +2208,13 @@ TRANSITION_LIST("src_port_data[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 510.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 600.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 770.0;
+		LEVEL 0 FOR 500.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 500.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 380.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 500.0;
 	}
 }
 
@@ -2197,8 +2223,7 @@ TRANSITION_LIST("tbl_data_valid")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 999.0;
-		LEVEL 0 FOR 1001.0;
+		LEVEL X FOR 2000.0;
 	}
 }
 
@@ -2207,8 +2232,52 @@ TRANSITION_LIST("tbl_ready")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 999.0;
-		LEVEL 0 FOR 1001.0;
+		LEVEL X FOR 2000.0;
+	}
+}
+
+TRANSITION_LIST("CAM_FSM:Finite_State_Machine|state_reg.s0")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL U FOR 2000.0;
+	}
+}
+
+TRANSITION_LIST("CAM_FSM:Finite_State_Machine|state_reg.s1")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL U FOR 2000.0;
+	}
+}
+
+TRANSITION_LIST("CAM_FSM:Finite_State_Machine|state_reg.s2")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL U FOR 2000.0;
+	}
+}
+
+TRANSITION_LIST("CAM_FSM:Finite_State_Machine|state_reg.s3")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL U FOR 2000.0;
+	}
+}
+
+TRANSITION_LIST("CAM_FSM:Finite_State_Machine|state_reg.s4")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL U FOR 2000.0;
 	}
 }
 
@@ -2243,7 +2312,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "dst_mac_data";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 3;
 	TREE_LEVEL = 0;
 	CHILDREN = 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51;
@@ -2253,7 +2322,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "dst_mac_data[47]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 4;
 	TREE_LEVEL = 1;
 	PARENT = 3;
@@ -2263,7 +2332,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "dst_mac_data[46]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 5;
 	TREE_LEVEL = 1;
 	PARENT = 3;
@@ -2273,7 +2342,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "dst_mac_data[45]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 6;
 	TREE_LEVEL = 1;
 	PARENT = 3;
@@ -2283,7 +2352,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "dst_mac_data[44]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 7;
 	TREE_LEVEL = 1;
 	PARENT = 3;
@@ -2293,7 +2362,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "dst_mac_data[43]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 8;
 	TREE_LEVEL = 1;
 	PARENT = 3;
@@ -2303,7 +2372,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "dst_mac_data[42]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 9;
 	TREE_LEVEL = 1;
 	PARENT = 3;
@@ -2313,7 +2382,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "dst_mac_data[41]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 10;
 	TREE_LEVEL = 1;
 	PARENT = 3;
@@ -2323,7 +2392,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "dst_mac_data[40]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 11;
 	TREE_LEVEL = 1;
 	PARENT = 3;
@@ -2333,7 +2402,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "dst_mac_data[39]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 12;
 	TREE_LEVEL = 1;
 	PARENT = 3;
@@ -2343,7 +2412,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "dst_mac_data[38]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 13;
 	TREE_LEVEL = 1;
 	PARENT = 3;
@@ -2353,7 +2422,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "dst_mac_data[37]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 14;
 	TREE_LEVEL = 1;
 	PARENT = 3;
@@ -2363,7 +2432,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "dst_mac_data[36]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 15;
 	TREE_LEVEL = 1;
 	PARENT = 3;
@@ -2373,7 +2442,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "dst_mac_data[35]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 16;
 	TREE_LEVEL = 1;
 	PARENT = 3;
@@ -2383,7 +2452,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "dst_mac_data[34]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 17;
 	TREE_LEVEL = 1;
 	PARENT = 3;
@@ -2393,7 +2462,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "dst_mac_data[33]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 18;
 	TREE_LEVEL = 1;
 	PARENT = 3;
@@ -2403,7 +2472,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "dst_mac_data[32]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 19;
 	TREE_LEVEL = 1;
 	PARENT = 3;
@@ -2413,7 +2482,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "dst_mac_data[31]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 20;
 	TREE_LEVEL = 1;
 	PARENT = 3;
@@ -2423,7 +2492,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "dst_mac_data[30]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 21;
 	TREE_LEVEL = 1;
 	PARENT = 3;
@@ -2433,7 +2502,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "dst_mac_data[29]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 22;
 	TREE_LEVEL = 1;
 	PARENT = 3;
@@ -2443,7 +2512,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "dst_mac_data[28]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 23;
 	TREE_LEVEL = 1;
 	PARENT = 3;
@@ -2453,7 +2522,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "dst_mac_data[27]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 24;
 	TREE_LEVEL = 1;
 	PARENT = 3;
@@ -2463,7 +2532,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "dst_mac_data[26]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 25;
 	TREE_LEVEL = 1;
 	PARENT = 3;
@@ -2473,7 +2542,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "dst_mac_data[25]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 26;
 	TREE_LEVEL = 1;
 	PARENT = 3;
@@ -2483,7 +2552,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "dst_mac_data[24]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 27;
 	TREE_LEVEL = 1;
 	PARENT = 3;
@@ -2493,7 +2562,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "dst_mac_data[23]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 28;
 	TREE_LEVEL = 1;
 	PARENT = 3;
@@ -2503,7 +2572,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "dst_mac_data[22]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 29;
 	TREE_LEVEL = 1;
 	PARENT = 3;
@@ -2513,7 +2582,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "dst_mac_data[21]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 30;
 	TREE_LEVEL = 1;
 	PARENT = 3;
@@ -2523,7 +2592,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "dst_mac_data[20]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 31;
 	TREE_LEVEL = 1;
 	PARENT = 3;
@@ -2533,7 +2602,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "dst_mac_data[19]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 32;
 	TREE_LEVEL = 1;
 	PARENT = 3;
@@ -2543,7 +2612,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "dst_mac_data[18]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 33;
 	TREE_LEVEL = 1;
 	PARENT = 3;
@@ -2553,7 +2622,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "dst_mac_data[17]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 34;
 	TREE_LEVEL = 1;
 	PARENT = 3;
@@ -2563,7 +2632,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "dst_mac_data[16]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 35;
 	TREE_LEVEL = 1;
 	PARENT = 3;
@@ -2573,7 +2642,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "dst_mac_data[15]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 36;
 	TREE_LEVEL = 1;
 	PARENT = 3;
@@ -2583,7 +2652,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "dst_mac_data[14]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 37;
 	TREE_LEVEL = 1;
 	PARENT = 3;
@@ -2593,7 +2662,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "dst_mac_data[13]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 38;
 	TREE_LEVEL = 1;
 	PARENT = 3;
@@ -2603,7 +2672,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "dst_mac_data[12]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 39;
 	TREE_LEVEL = 1;
 	PARENT = 3;
@@ -2613,7 +2682,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "dst_mac_data[11]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 40;
 	TREE_LEVEL = 1;
 	PARENT = 3;
@@ -2623,7 +2692,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "dst_mac_data[10]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 41;
 	TREE_LEVEL = 1;
 	PARENT = 3;
@@ -2633,7 +2702,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "dst_mac_data[9]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 42;
 	TREE_LEVEL = 1;
 	PARENT = 3;
@@ -2643,7 +2712,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "dst_mac_data[8]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 43;
 	TREE_LEVEL = 1;
 	PARENT = 3;
@@ -2653,7 +2722,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "dst_mac_data[7]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 44;
 	TREE_LEVEL = 1;
 	PARENT = 3;
@@ -2663,7 +2732,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "dst_mac_data[6]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 45;
 	TREE_LEVEL = 1;
 	PARENT = 3;
@@ -2673,7 +2742,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "dst_mac_data[5]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 46;
 	TREE_LEVEL = 1;
 	PARENT = 3;
@@ -2683,7 +2752,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "dst_mac_data[4]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 47;
 	TREE_LEVEL = 1;
 	PARENT = 3;
@@ -2693,7 +2762,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "dst_mac_data[3]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 48;
 	TREE_LEVEL = 1;
 	PARENT = 3;
@@ -2703,7 +2772,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "dst_mac_data[2]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 49;
 	TREE_LEVEL = 1;
 	PARENT = 3;
@@ -2713,7 +2782,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "dst_mac_data[1]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 50;
 	TREE_LEVEL = 1;
 	PARENT = 3;
@@ -2723,7 +2792,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "dst_mac_data[0]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 51;
 	TREE_LEVEL = 1;
 	PARENT = 3;
@@ -2733,7 +2802,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "src_mac_data";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 52;
 	TREE_LEVEL = 0;
 	CHILDREN = 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100;
@@ -2743,7 +2812,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "src_mac_data[47]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 53;
 	TREE_LEVEL = 1;
 	PARENT = 52;
@@ -2753,7 +2822,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "src_mac_data[46]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 54;
 	TREE_LEVEL = 1;
 	PARENT = 52;
@@ -2763,7 +2832,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "src_mac_data[45]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 55;
 	TREE_LEVEL = 1;
 	PARENT = 52;
@@ -2773,7 +2842,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "src_mac_data[44]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 56;
 	TREE_LEVEL = 1;
 	PARENT = 52;
@@ -2783,7 +2852,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "src_mac_data[43]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 57;
 	TREE_LEVEL = 1;
 	PARENT = 52;
@@ -2793,7 +2862,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "src_mac_data[42]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 58;
 	TREE_LEVEL = 1;
 	PARENT = 52;
@@ -2803,7 +2872,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "src_mac_data[41]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 59;
 	TREE_LEVEL = 1;
 	PARENT = 52;
@@ -2813,7 +2882,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "src_mac_data[40]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 60;
 	TREE_LEVEL = 1;
 	PARENT = 52;
@@ -2823,7 +2892,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "src_mac_data[39]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 61;
 	TREE_LEVEL = 1;
 	PARENT = 52;
@@ -2833,7 +2902,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "src_mac_data[38]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 62;
 	TREE_LEVEL = 1;
 	PARENT = 52;
@@ -2843,7 +2912,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "src_mac_data[37]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 63;
 	TREE_LEVEL = 1;
 	PARENT = 52;
@@ -2853,7 +2922,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "src_mac_data[36]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 64;
 	TREE_LEVEL = 1;
 	PARENT = 52;
@@ -2863,7 +2932,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "src_mac_data[35]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 65;
 	TREE_LEVEL = 1;
 	PARENT = 52;
@@ -2873,7 +2942,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "src_mac_data[34]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 66;
 	TREE_LEVEL = 1;
 	PARENT = 52;
@@ -2883,7 +2952,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "src_mac_data[33]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 67;
 	TREE_LEVEL = 1;
 	PARENT = 52;
@@ -2893,7 +2962,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "src_mac_data[32]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 68;
 	TREE_LEVEL = 1;
 	PARENT = 52;
@@ -2903,7 +2972,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "src_mac_data[31]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 69;
 	TREE_LEVEL = 1;
 	PARENT = 52;
@@ -2913,7 +2982,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "src_mac_data[30]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 70;
 	TREE_LEVEL = 1;
 	PARENT = 52;
@@ -2923,7 +2992,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "src_mac_data[29]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 71;
 	TREE_LEVEL = 1;
 	PARENT = 52;
@@ -2933,7 +3002,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "src_mac_data[28]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 72;
 	TREE_LEVEL = 1;
 	PARENT = 52;
@@ -2943,7 +3012,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "src_mac_data[27]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 73;
 	TREE_LEVEL = 1;
 	PARENT = 52;
@@ -2953,7 +3022,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "src_mac_data[26]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 74;
 	TREE_LEVEL = 1;
 	PARENT = 52;
@@ -2963,7 +3032,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "src_mac_data[25]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 75;
 	TREE_LEVEL = 1;
 	PARENT = 52;
@@ -2973,7 +3042,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "src_mac_data[24]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 76;
 	TREE_LEVEL = 1;
 	PARENT = 52;
@@ -2983,7 +3052,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "src_mac_data[23]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 77;
 	TREE_LEVEL = 1;
 	PARENT = 52;
@@ -2993,7 +3062,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "src_mac_data[22]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 78;
 	TREE_LEVEL = 1;
 	PARENT = 52;
@@ -3003,7 +3072,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "src_mac_data[21]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 79;
 	TREE_LEVEL = 1;
 	PARENT = 52;
@@ -3013,7 +3082,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "src_mac_data[20]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 80;
 	TREE_LEVEL = 1;
 	PARENT = 52;
@@ -3023,7 +3092,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "src_mac_data[19]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 81;
 	TREE_LEVEL = 1;
 	PARENT = 52;
@@ -3033,7 +3102,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "src_mac_data[18]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 82;
 	TREE_LEVEL = 1;
 	PARENT = 52;
@@ -3043,7 +3112,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "src_mac_data[17]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 83;
 	TREE_LEVEL = 1;
 	PARENT = 52;
@@ -3053,7 +3122,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "src_mac_data[16]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 84;
 	TREE_LEVEL = 1;
 	PARENT = 52;
@@ -3063,7 +3132,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "src_mac_data[15]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 85;
 	TREE_LEVEL = 1;
 	PARENT = 52;
@@ -3073,7 +3142,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "src_mac_data[14]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 86;
 	TREE_LEVEL = 1;
 	PARENT = 52;
@@ -3083,7 +3152,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "src_mac_data[13]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 87;
 	TREE_LEVEL = 1;
 	PARENT = 52;
@@ -3093,7 +3162,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "src_mac_data[12]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 88;
 	TREE_LEVEL = 1;
 	PARENT = 52;
@@ -3103,7 +3172,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "src_mac_data[11]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 89;
 	TREE_LEVEL = 1;
 	PARENT = 52;
@@ -3113,7 +3182,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "src_mac_data[10]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 90;
 	TREE_LEVEL = 1;
 	PARENT = 52;
@@ -3123,7 +3192,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "src_mac_data[9]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 91;
 	TREE_LEVEL = 1;
 	PARENT = 52;
@@ -3133,7 +3202,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "src_mac_data[8]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 92;
 	TREE_LEVEL = 1;
 	PARENT = 52;
@@ -3143,7 +3212,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "src_mac_data[7]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 93;
 	TREE_LEVEL = 1;
 	PARENT = 52;
@@ -3153,7 +3222,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "src_mac_data[6]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 94;
 	TREE_LEVEL = 1;
 	PARENT = 52;
@@ -3163,7 +3232,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "src_mac_data[5]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 95;
 	TREE_LEVEL = 1;
 	PARENT = 52;
@@ -3173,7 +3242,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "src_mac_data[4]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 96;
 	TREE_LEVEL = 1;
 	PARENT = 52;
@@ -3183,7 +3252,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "src_mac_data[3]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 97;
 	TREE_LEVEL = 1;
 	PARENT = 52;
@@ -3193,7 +3262,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "src_mac_data[2]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 98;
 	TREE_LEVEL = 1;
 	PARENT = 52;
@@ -3203,7 +3272,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "src_mac_data[1]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 99;
 	TREE_LEVEL = 1;
 	PARENT = 52;
@@ -3213,7 +3282,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "src_mac_data[0]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Unsigned;
 	TREE_INDEX = 100;
 	TREE_LEVEL = 1;
 	PARENT = 52;
@@ -3317,9 +3386,54 @@ DISPLAY_LINE
 	TREE_LEVEL = 0;
 }
 
+DISPLAY_LINE
+{
+	CHANNEL = "CAM_FSM:Finite_State_Machine|state_reg.s0";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 111;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "CAM_FSM:Finite_State_Machine|state_reg.s1";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 112;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "CAM_FSM:Finite_State_Machine|state_reg.s2";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 113;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "CAM_FSM:Finite_State_Machine|state_reg.s3";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 114;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "CAM_FSM:Finite_State_Machine|state_reg.s4";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 115;
+	TREE_LEVEL = 0;
+}
+
 TIME_BAR
 {
-	TIME = 530000;
+	TIME = 0;
 	MASTER = TRUE;
 }
 ;
